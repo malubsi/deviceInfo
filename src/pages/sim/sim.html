@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content>
+  <h5 *ngIf="!simInfo" style="color:#629aff;padding-left:15px;padding-top:10px;">Plugin not available.</h5>
   <ion-list *ngIf="simInfo">
     <ion-item-divider color="dark">General</ion-item-divider>
     <ion-item>
@@ -29,47 +30,49 @@
       <ion-label>Subscriber ID:</ion-label>
       <ion-input disabled type="text" [ngModel]="simInfo.subscriberId"></ion-input>
     </ion-item>
-    <ion-item-divider color="dark">Sim 1</ion-item-divider>
-    <ion-item>
-      <ion-label>Carrier Name:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].carrierName"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Display Name:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].displayName"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Country Code:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].countryCode"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Device ID:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].deviceId"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Is data roaming?</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].isDataRoaming"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Is network roaming?</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].isNetworkRoaming"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Mcc:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].mcc"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Mnc:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].mnc"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Phone Number:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].phoneNumber"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Sim Serial Number:</ion-label>
-      <ion-input disabled type="text" [ngModel]="simInfo.cards[0].simSerialNumber"></ion-input>
-    </ion-item>
+    <div *ngIf="simInfo.cards[0]">
+      <ion-item-divider color="dark">Sim 1</ion-item-divider>
+      <ion-item>
+        <ion-label>Carrier Name:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].carrierName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Display Name:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].displayName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Country Code:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].countryCode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Device ID:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].deviceId"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Is data roaming?</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].isDataRoaming"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Is network roaming?</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].isNetworkRoaming"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mcc:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].mcc"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Mnc:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].mnc"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone Number:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].phoneNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sim Serial Number:</ion-label>
+        <ion-input disabled type="text" [ngModel]="simInfo.cards[0].simSerialNumber"></ion-input>
+      </ion-item>
+    </div>
     <div *ngIf="simInfo.cards[1]">
       <ion-item-divider color="dark">Sim 2</ion-item-divider>
       <ion-item>
