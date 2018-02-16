@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Device
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Cordova:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.cordova"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>isVirtual:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.isVirtual"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Manufacturer:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.manufacturer"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Model:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.model"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Platform:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.platform"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Serial:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.serial"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Uuid:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.uuid"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Version:</ion-label>
+      <ion-input disabled type="text" [ngModel]="device.version"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>

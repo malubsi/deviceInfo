@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Diagnostic
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3 style="color:#629aff;padding-left:15px;padding-top:10px;">Is available?</h3>
+  <ion-item>
+    <ion-label> Camera</ion-label>
+    <ion-toggle color="checked" disabled [checked]="camera"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label> Bluetooth</ion-label>
+    <ion-toggle color="checked" disabled [checked]="bluetooth"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label> Location</ion-label>
+    <ion-toggle color="checked" disabled [checked]="location"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label> Wifi</ion-label>
+    <ion-toggle color="checked" disabled [checked]="wifi"></ion-toggle>
+  </ion-item>
+</ion-content>
